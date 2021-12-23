@@ -1,10 +1,10 @@
 # Build an Amazon SageMaker Pipeline to Transform Raw Texts to A Knowledge Graph
 This repository provides a pipeline to create a knowledge graph from raw texts. The pipeline concatenate major steps including:
-- Data processing: transform labeled text data to the Subject-Predicate-Object (SPO) format
-- Training: use a RNN-based algorithm to train an AI model to predict SPOs from given texts
-- Create Neptune database: if the training metric (F1-Score) passes the threshold, create a Neptune database
-- Batch Transform: use the model trained in the `Training` step to do inferences on the test data
-- Bulk load: transform the inference results to the format which can be recognized by the `bulkload` function of Neptune, and load the transformed data to the Neptune database.
+- <strong>Data processing</strong>: transform labeled text data to the Subject-Predicate-Object (SPO) format
+- <strong>Training</strong>: use a RNN-based algorithm to train an AI model to predict SPOs from given texts
+- <strong>Create a Neptune database</strong>: if the training metric (F1-Score) passes the threshold, create a Neptune database
+- <strong>Batch Transform</strong>: use the model trained in the `Training` step to do inferences on the test data
+- <strong>Bulk load</strong>: transform the inference results to the format which can be recognized by the `bulkload` function of Neptune, and load the transformed data to the Neptune database.
 
 <div align="center"><img width=600 src="./img/KG-pipeline-main.png"></div>
 
